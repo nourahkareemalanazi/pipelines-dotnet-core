@@ -18,11 +18,6 @@ pipeline {
                 sh "dotnet test"
             }
 
-            post {
-                always {
-                    junit '**/*.xml'
-                }
-            }
         }
 
         stage('sonar scan'){
