@@ -20,7 +20,8 @@ pipeline {
 
             post {
                 always {
-                    junit 'test/*.xml'
+                    junit allowEmptyResults: true
+                    testResults: '**/test-results/*.xml'
                 }
             }
         }
